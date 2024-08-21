@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function compete(a, b) {
+            if (a >= 100 || b >= 100) {
+                if (a > b) {
+                    return "win";
+                } else if (a == b) {
+                    return "draw";
+                } else {
+                    return "lose";
+                }
+            } else {
+                return "not enough";
+            }
+        }
+
+        function check1() {
+            var scoreDolphins = (96 + 108 + 89) / 3;
+            var scoreKoalas = (88 + 91 + 110) / 3;
+            var result = compete(scoreDolphins, scoreKoalas);
+            console.log("Dolphins: " + Math.round(scoreDolphins) + " - Koalas: " + Math.round(scoreKoalas));
+            console.log("Result: " + result);
+        }
+
+        function check2() {
+            var scoreDolphins = (97 + 112 + 101) / 3;
+            var scoreKoalas = (109 + 95 + 123) / 3;
+            var result = compete(scoreDolphins, scoreKoalas);
+            console.log("Dolphins: " + Math.round(scoreDolphins) + " - Koalas: " + Math.round(scoreKoalas));
+            console.log("Result: " + result);
+        }
+        check1();
+        check2();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

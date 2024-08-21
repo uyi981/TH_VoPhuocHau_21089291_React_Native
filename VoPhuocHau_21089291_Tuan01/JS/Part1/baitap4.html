@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function tipCaculator(tipValue) {
+
+            var discountTemp = tipValue >= 50 && tipValue < 300 ? 0.15 : 0.2;
+            var discount = discountTemp == 0.2 && tipValue >= 300 ? 0.2 : 0;
+            console.log("The bill was " + tipValue + ", the tip was " + discount * tipValue + " and the total value " + (1 + discount) * tipValue);
+        }
+
+        function check() {
+            var tipValue = [125, 555, 44];
+            tipCaculator(tipValue[0]);
+            tipCaculator(tipValue[1]);
+            tipCaculator(tipValue[2]);
+        }
+        check();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

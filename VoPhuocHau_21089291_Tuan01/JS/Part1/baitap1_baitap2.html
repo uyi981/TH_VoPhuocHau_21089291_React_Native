@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function check() {
+            var BMIJohn1 = BMIcaculator(1.95, 92);
+            var BMIMark1 = BMIcaculator(1.69, 78);
+            var BMIJohn2 = BMIcaculator(1.76, 85);
+            var BMIMark2 = BMIcaculator(1.88, 95);
+            var markHigherBMI1 = BMIMark1 > BMIJohn1;
+            var markHigherBMI2 = BMIMark2 > BMIJohn2;
+            console.log("Data1: Is Mark's BMI higher than John's? " + markHigherBMI1);
+            console.log("Data2: Is Mark's BMI higher than John's? " + markHigherBMI2);
+            if (markHigherBMI1) {
+                console.log("Data2: Mark's BMI " + Math.round(BMIMark1) + " is higher than John's " + Math.round(BMIJohn1));
+            } else {
+                console.log("Data2: John's BMI " + Math.round(BMIJohn1) + " is higher than Mark's " + Math.round(BMIMark1));
+            }
+            if (markHigherBMI2) {
+                console.log("Data2: Mark's BMI " + Math.round(BMIMark2) + " is higher than John's " + Math.round(BMIJohn2));
+            } else {
+                console.log("Data2: John's BMI " + Math.round(BMIJohn2) + " is higher than Mark's " + Math.round(BMIMark2));
+            }
+        }
+
+        function BMIcaculator(height, mass) {
+            var BMI = mass / (height * height);
+            return BMI;
+        }
+        check();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

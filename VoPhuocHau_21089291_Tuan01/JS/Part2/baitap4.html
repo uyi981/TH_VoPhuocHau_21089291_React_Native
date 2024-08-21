@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function tipCaculator(billValue) {
+            for (var i = 0; i < billValue.length; i++) {
+                var discountTemp = billValue[i] >= 50 && billValue[i] < 300 ? 0.15 : 0.2;
+                var discount = discountTemp == 0.2 && billValue[i] >= 300 ? 0.2 : 0;
+                console.log("The bill was " + billValue[i] + ", the tip was " + discount * billValue[i] + " and the total value " + (1 + discount) * billValue[i]);
+
+            }
+        }
+
+        function check() {
+            var billValue = [125, 555, 44];
+            tipCaculator(billValue);
+            console.log("Average bill value: " + Math.round(calAverage(billValue)));
+        }
+        check();
+
+        function calAverage(bilValue) {
+            var sum = 0;
+            for (var i = 0; i < bilValue.length; i++) {
+                sum += bilValue[i];
+            }
+            return sum / bilValue.length;
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
